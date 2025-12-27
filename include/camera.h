@@ -14,10 +14,21 @@ typedef struct camera {
   int max_depth;
   double pixel_samples_scale;
 
+  double vfov;
+  point3 lookfrom;
+  point3 lookat;
+  vec3 vup;
+
+  double defocus_angle;
+  double focus_dist;
+
   point3 center;
-  point3 pixel100_loc;
+  point3 pixel00_loc;
   vec3 pixel_delta_u;
   vec3 pixel_delta_v;
+  vec3 u, v, w;
+  vec3 defocus_disk_u;
+  vec3 defocus_disk_v;
 } camera;
 
 void initialize(camera *c);

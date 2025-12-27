@@ -28,4 +28,10 @@ typedef struct metal {
 
 metal metal_new(color albedo, double fuzz);
 
+typedef struct dielectric {
+  material super;
+  double refraction_index;
+} dielectric;
+dielectric dielectric_new(double refraction_index);
+
 #endif
