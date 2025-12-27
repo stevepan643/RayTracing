@@ -1,6 +1,7 @@
 #ifndef VEC3_H
 #define VEC3_H
 
+#include "random.h"
 #include <math.h>
 
 typedef struct vec3 {
@@ -37,5 +38,12 @@ double vec3_dot(vec3 v1, vec3 v2) {
 double vec3_len_pow(vec3 v) { return v.x * v.x + v.y * v.y + v.z * v.z; }
 double vec3_len(vec3 v) { return sqrt(vec3_len_pow(v)); }
 vec3 vec3_unit(vec3 v) { return vec3_div_doub(v, vec3_len(v)); }
+
+
+vec3 vec3_randomr() {
+	return (vec3){random_double(), random_double(), random_double()};
+}
+vec3 vec3_random_from(double min, double max) {
+}
 
 #endif
