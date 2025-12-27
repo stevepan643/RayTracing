@@ -1,1 +1,2 @@
-cc main.c -lm -O3 -o raytracing
+cc -I./include src/*.c -o raytracer -lm -O3 -march=native -ffast-math -fopenmp
+
